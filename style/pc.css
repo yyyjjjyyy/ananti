@@ -11,8 +11,8 @@
 
 
 @font-face {
-    font-family: 'MapoDPPA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff');
+    font-family: 'mapodpp';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/mapodppA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -414,7 +414,7 @@
 
 
     .room > label {
-        font-family: 'MapoDPP', 'S-CoreDream-3Light', '맑은 고딕';
+        font-family: 'mapodpp', 'S-CoreDream-3Light', '맑은 고딕';
         font-size: 18px;
         padding: 10px;
         color: #b1b1b1;
@@ -488,7 +488,7 @@
     }
 
     .room01 > .r_right h3 {
-        font-family: 'MapoDPP', 'S-CoreDream-3Light', '맑은 고딕';
+        font-family: 'mapodpp', 'S-CoreDream-3Light', '맑은 고딕';
         font-size: 18px;
         color: #5e6376;
         padding-bottom: 12px;
@@ -594,7 +594,7 @@
     }
 
     .round_border > li a {
-        font-family: 'MapoDPP', 'S-CoreDream-3Light', '맑은 고딕';
+        font-family: 'mapodpp', 'S-CoreDream-3Light', '맑은 고딕';
         font-size: 12px;
         width: 108px;
         display: inline-block;

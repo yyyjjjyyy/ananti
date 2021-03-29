@@ -201,7 +201,6 @@
         text-align: center;
         line-height: 30px;
         border: px solid rgba(255, 255, 255, 0.67);
-        width: 0%;
         margin: 0 auto;
         padding: 2% 0px;
         background-color: rgba(185, 176, 152, 0.97);
@@ -387,7 +386,7 @@
 
 
     .room > label {
-        font-family: 'MapoDPP', 'S-CoreDream-3Light', '맑은 고딕';
+        font-family: 'mapodpp', 'S-CoreDream-3Light', '맑은 고딕';
         font-size: 12px;
         margin-right: 8px;
         color: #b1b1b1;
@@ -463,7 +462,7 @@
     }
 
     .room01 > .r_right h3 {
-        font-family: 'MapoDPP', 'S-CoreDream-3Light', '맑은 고딕';
+        font-family: 'mapodpp', 'S-CoreDream-3Light', '맑은 고딕';
         font-size: 16px;
         color: #5e6376;
         padding-bottom: 5px;
