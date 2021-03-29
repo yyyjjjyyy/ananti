@@ -1,0 +1,31 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{-webkit-text-size-adjust:none;}/* 가로방향 회전시 화면확대 방지*/
+
+
+body{
+	font-family: 'S-CoreDream-3Light', '맑은 고딕', sans-serif;
+	font-size: 12px;
+	color: #7e7e7e;
+
+	}
+
+a{text-decoration: none; color: #7e7e7e;}
+a:hover{text-decoration: underline;}
+
+header,footer{
+	width: 100%;
+	
+}
+
+/* 체크박스 숨기기 */
+#toggle{display:none;}
+
+	.swiper-container{
+			width:100%;
+				}

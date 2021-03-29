@@ -1,0 +1,751 @@
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>아난티코브</title>
+
+    <!-- jost 폰트 -->
+
+    <link href="//db.onlinewebfonts.com/c/88e77b9b43653c3e36057589ef18d1f1?family=Jost*+400+Book" rel="stylesheet" type="text/css" />
+
+    <!--notoserif-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+
+
+    <!-- Playfair Display -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+
+
+    <!--스와이퍼슬라이드-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--	파비콘 이미지 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/sns_icon-06.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+
+    <!--스와이프슬라이드-->
+    <link rel="stylesheet" href="./style/swiper.css">
+  
+    <!--	1. 초기화 -->
+    <link href="./style/reset.css" rel="stylesheet" type="text/css">
+
+    <!--  2. 공통서식 - 글꼴, 크기, 색상, 하이퍼링크 -->
+    <link href="./style/base.css" rel="stylesheet" type="text/css">
+
+    <!--  3. mobile 서식  최대 767px  -->
+    <link href="./style/mobile.css" rel="stylesheet" type="text/css">
+
+    <!-- 4. tablet 서식 최소 768 ~ 최대 1023px
+<link href="./style/tabelt.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- 5. pc서식 최소 1024이상 -->
+    <link href="./style/pc.css" rel="stylesheet" type="text/css">
+
+
+    <!-- 아이콘 폰트 주소 -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" type="text/css" rel="stylesheet">
+
+
+    <!--스와이퍼 슬라이드 js-->
+    <script src="./script/jquery.js" charset="utf-8"></script>
+
+    <script src="./script/swiper.js" charset="utf-8"></script>
+
+
+
+
+    <script>
+        //변수 선언, 초기값 설정.
+        var n = 1;
+
+        //함수 작성하기
+        function moveLeft() { //역순으로 변경되는 함수 설정
+            if (n == 1) { //첫번째 이미지상태에서 왼쪽버튼 누르면 
+                n = 3; //4번이미지 나온다.
+            } else { //그렇지않으면
+                n--; //하나씩 감소한다.
+            }
+            console.log(n); //콘솔창에서 제대로 동작하는지 확인
+            //해당 이미지 속성값에 변수를 대입하여 이미지를 변경한다.
+
+            document.getElementById('photo').src = "./img/food0" + n + ".jpg";
+            document.getElementById('photo2').src = "./img/food" + n + ".jpg";
+            document.getElementById('photo3').src = "./img/f0" + n + ".jpg";
+
+        }
+
+        //3초마다 moveRight 함수를 호출하여 반복 실행하기
+        //시간객체 - setInterval, setTimeout, setInterval(함수명, 반복시간)
+
+        var Timer = setInterval(moveRight, 3000);
+
+
+
+        function moveRight() { //차례로
+            if (n == 3) { //마지막 번 이미지 상태에서 오른쪽버튼 누르면
+                n = 1; //1번 이미지가 나온다
+            } else { //그렇지 않으면
+                n++; //하나씩 증가한다
+            }
+            console.log(n); // 콘솔창에서 제대로 동작하는지 확인
+            // 해당 이미지 속성값에 변수를 대입하여 이미지를 변경한다.
+            document.getElementById('photo').src = "./img/food0" + n + ".jpg";
+            document.getElementById('photo2').src = "./img/food" + n + ".jpg";
+            document.getElementById('photo3').src = "./img/f0" + n + ".jpg";
+        }
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+    <div id="wrap">
+
+        <!--헤더영역 시작-->
+        <header>
+           
+
+
+             
+         
+
+            <input type="checkbox" id="toggle">
+            <!-- 내비게이션 -->
+
+            <nav class="lnb">
+                 
+                <ul>
+                    <li> <a href="kor.html" title="한국어">KOR </a></li>
+                    <li> <a href="eng.html" title="영어">ENG </a></li>
+                    <li> <a href="servicecenter.html" title="고객센터">고객센터 </a></li>
+                    <li> <a href="login.html" title="회원가입">login </a></li>
+                    <li> <a href="join.html" title="로그인">join </a></li>
+                </ul>
+            </nav>
+
+
+            <div class="nav_wrap">
+                <!--내비감싸는 부모요소 만들어주고 닫기버튼에 레이블 연결-->
+ <!--로고-->
+                <h1 class="logo"><a href="index.html" title="메인페이지 바로가기"><img src="./img/logo.png" alt="상단로고이미지"></a></h1>
+             
+
+                <!--내비-->
+                <nav class="gnb">
+                   
+                    <div class="header_inner">
+                      <!--토글메뉴(아이콘폰트)-->
+                <label for="toggle"><i class="fas fa-bars"></i> </label>
+                <!--햄버거 레이블로 묶어줘야함-->
+   </div>
+            <!--헤더이너 영역 여기까지 -->
+                   
+                    <ul>
+                        <li> <a href="room.html" title="객실정보">아난티코브<i class="fas fa-angle-down"></i></a>
+                            <ul class="sub">
+                                <li><a href="room_p.html" title="펜트하우스 해운대">펜트하우스</a></li>
+                                <li><a href="room_r.html" title="프라이빗레지던스">프라이빗레지던스</a></li>
+                                <li><a href="room_h.html" title="아난티힐튼">아난티 힐튼</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a href="space.html" title="레저/피트니스">레저 &#x0026; 피트니스<i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="water.html" title="워터하우스">워터하우스</a></li>
+                                <li><a href="pool1.html" title="오션인피니트풀">오션인피니트풀</a></li>
+                                <li><a href="pool2.html" title="맥퀸즈풀">맥퀸즈풀</a></li>
+                                <li><a href="pool3.html" title="오너스클럽 야외수영장">오너스클럽</a></li>
+                                <li><a href="fitness.html" title="피트니스센터">피트니스센터</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a href="town.html" title="아난티타운">아난티타운<i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="food.html" title="음식">레스토랑</a></li>
+                                <li><a href="culture.html" title="문화">문화공간</a></li>
+                                <li><a href="shop.html" title="쇼핑">쇼핑공간</a></li>
+                                <li><a href="health.html" title="건강">닥터아난티</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a href="wedding_event.html" title="웨딩/이벤트">웨딩 &#x0026; 연회<i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="wedding.html" title="웨딩">웨딩</a></li>
+                                <li><a href="party.html" title="이벤트">연회</a></li>
+                                <li><a href="meeting.html" title="미팅/컨퍼런스">미팅/컨퍼런스</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a href="guide.html" title="">예약/가이드<i class="fas fa-angle-down"></i></a>
+                            <ul class="sub">
+                                <li><a href="reservation.html" title="예약">아난티예약</a></li>
+                                <li><a href="guide.html" title="아난티가이드">아난티가이드</a></li>
+                                <li><a href="ananti.html" title="아난티그룹">아난티그룹</a></li>
+                                <li><a href="center.html" title="고객센터">고객센터</a></li>
+                                <li><a href="#" title="주변관광정보">주변관광정보</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a href="notice.html" title="">공지사항<i class="fas fa-angle-down"></i></a>
+                            <ul class="sub">
+                                <li><a href="notice.html" title="공지사항">공지사항</a></li>
+                                <li><a href="package.html" title="패키지">패키지</a></li>
+                                <li><a href="event.html" title="이벤트">이벤트</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a href="gallery.html" title="갤러리">갤러리<i class="fas fa-angle-down"></i></a>
+                            <ul class="sub">
+                                <li><a href="gallery.html" title="갤러리">갤러리</a></li>
+                                <li><a href="https://www.youtube.com/channel/UC6swKU0RN4wGeqPTyhLkT8A" title="영상">영상</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <label for="toggle"> <i class="fas fa-times"></i></label>
+            <!--닫기버튼-->
+
+        </header>
+
+        <!--콘텐츠 영역 시작 -->
+
+        <main>
+            <article class="visual">
+                <!-- Swiper -->
+                <div class="swiper-container slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg1">
+                            <div>
+                            <h2>ANANTI is Eternal Journey</h2>
+                            <p> 아난티는 고객의 가치 있는 삶과 시간을 위해<br>
+                                새로운 라이프 스타일을 만드는 여정을 지속할 것 입니다.</p>
+                                </div>
+
+
+                        </div>
+
+                        <div class="swiper-slide bg2">
+                            <div>
+                                <h2>ANANTI cove</h2>
+                                <p> [아난티 회원] 장기 투숙 예약 안내<br><br>
+                                    최소 7일부터 최대 30일까지 <br>
+                                    아난티의 객실을 장기로 이용하실 수 있습니다.<br>
+                                    아난티에서 더욱 편안한 휴식을 누려보시길 바랍니다.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide bg3">
+                            <div>
+                                <h2>밤 하늘 총총 별 이야기
+                                    ‘별 헤는 밤’</h2>
+                                <p> 바쁜 일상에서 벗어나 문득 바라본 밤하늘의 신비로움을 느껴보신 적 있나요?<br>
+                                    ‘별 헤는 밤’ 액티비티와 함께 더욱 기억에 남는 아난티 코브의 밤을 즐겨보세요.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide bg4">
+                            <div>
+                                <h2>객실에서 셰프의 손맛을!</h2>
+                                <p>아난티 코브 셰프가 정성스레 준비한 음식을 객실로 배달해 드립니다.<br>
+                                    객실에서 편안하게 미식의 세계를 즐겨보세요.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
+                <ul id="reservation">
+                    <li><a href="#" title="체크인"><img src="./img/main_icon-02.png" alt="체크인"><span>체크-인</span></a></li>
+                    <li><a href="#" title="체크아웃"><img src="./img/main_icon-03.png" alt="체크아웃"><span>체크아웃</span></a></li>
+                    <li><a href="#" title="예약하기"><img src="./img/main_icon-04.png" alt="예약하기"><span>예약하기</span></a></li>
+                </ul>
+
+            </article>
+
+            <!--아난티 디자인 -->
+
+            <article class="title">
+                <h2>ANANTI DESIGN</h2>
+                <span class="p1">우리는 아난티가 존재해야 하는 장소와 디자인, 그리고 그곳에 담길 의미 있는 이야기들에 대해 끊임없이 고민하였습니다. </span>
+                <span class="p2">
+                    장소에 맞는 디자인과 라이프스타일을 담은 디자인, 일상과는 전혀 다른 아난티에서의 경험을 통해 <br>고객들에게 가치있는 시간을 선사하고 싶습니다.
+                </span>
+
+            </article>
+
+            <section class="room">
+
+                <!--탭 라디오 버튼-->
+
+                <input type="radio" id="r01" name='con' checked> <label for="r01">아난티 펜트하우스</label>
+
+                <input type="radio" id="r02" name='con'>
+                <label for="r02">아난티 프라이빗 레지던스</label>
+
+                <input type="radio" id="r03" name='con'>
+                <label for="r03">아난티 힐튼</label>
+
+
+                <!--탭01. 펜트하우스-->
+                <div class="tab01">
+
+                    <ul class="room01">
+
+                        <li>
+                            <a href="room_p.html" title="테라스 풀하우스"><img src="./img/room11.jpg" alt="테라스 풀하우스 이미지"></a>
+                        </li>
+
+
+                        <!--객실상세설명_우측 표-->
+                        <li class="r_right">
+                            <h3>아난티 펜트하우스</h3>
+                            <table>
+                                <caption>완벽한 프라이버시, 테라스 풀하우스</caption>
+                                <tr>
+                                    <th>크기</th>
+                                    <td>350&#x33A1;</td>
+                                </tr>
+                                <tr>
+                                    <th>구조</th>
+                                    <td>침실2, 거실1, 욕실2, 프라이빗 룸1</td>
+                                </tr>
+                                <tr>
+                                    <th>정원</th>
+                                    <td>4인</td>
+                                </tr>
+                            </table>
+                            <span class="membership">&#42; 테라스 풀하우스는 모두 회원제로 운영됩니다.</span>
+
+                            <span class="border"> <a href="#" title="회원권안내">아난티 회원권</a></span>
+
+                            <span class="more"> <a href="#" title="객실 상세보기">객실 상세보기</a></span>
+
+                            <ul CLASS="round_border">
+                                <li><a href="room_p.html" title="테라스풀하우스">&#x0023;테라스풀하우스</a></li>
+                                <li><a href="room_p.html" title="테라스풀하우스B">&#x0023;테라스풀하우스B</a></li>
+                                <li><a href="room_p.html" title="씨싸이드A">&#x0023;씨싸이드A</a></li>
+                                <li><a href="room_p.html" title="씨싸이드B">&#x0023;씨싸이드B</a></li>
+                                <li><a href="room_p.html" title="씨싸이드패밀리">&#x0023;씨싸이드패밀리</a></li>
+                                <li><a href="room_p.html" title="씨싸이드스페셜">&#x0023;씨싸이드스페셜</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+                    <ul class=" grid room02">
+                        <li><a href="room_p.html" title="테라스 풀하우스">
+                                <img src="./img/room22.jpg" alt="테라스 풀하우스"></a>
+                        </li>
+
+                        <li><a href="room_p.html" title="테라스 풀하우스">
+                                <img src="./img/room33.jpg" alt="테라스 풀하우스"></a>
+                        </li>
+
+                        <li><a href="room_p.html" title="테라스 풀하우스">
+                                <img src="./img/room44.jpg" alt="테라스풀하우스"></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!--탭02. 레지던스-->
+                <div class="tab02">
+
+                    <ul class="room01">
+
+                        <li>
+                            <a href="room_r.html" title="레지던스 객실"><img src="./img/r_04.jpg" alt="레지던스 객실 이미지"></a>
+                        </li>
+
+
+                        <!--객실상세설명_우측 표-->
+                        <li class="r_right">
+                            <h3>아난티 프라이빗 레지던스</h3>
+                            <table>
+                                <caption>여유롭고 아늑한 분위기, 프라이빗 레지던스 A</caption>
+                                <tr>
+                                    <th>크기</th>
+                                    <td>152&#x33A1;</td>
+                                </tr>
+                                <tr>
+                                    <th>구조</th>
+                                    <td>침실 1, 욕실 1</td>
+                                </tr>
+                                <tr>
+                                    <th>정원</th>
+                                    <td>2인</td>
+                                </tr>
+                            </table>
+                            <span class="membership">&#42; 프라이빗 레지던스는 모두 회원제로 운영됩니다.</span>
+
+                            <span class="border"> <a href="membership.html" title="회원권안내">아난티 회원권</a></span>
+
+                            <span class="more"> <a href="room_r.html" title="객실 상세보기">객실 상세보기</a></span>
+
+                            <ul CLASS="round_border">
+                                <li><a href="room_r.html" title="프라이빗 레지던스A">&#x0023;프라이빗 레지던스A</a></li>
+                                <li><a href="room_r.html" title="프라이빗 레지던스B">&#x0023;프라이빗 레지던스B</a></li>
+                                <li><a href="room_r.html" title="커넥팅 하우스">&#x0023;커넥팅 하우스</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class=" grid room02">
+                        <li><a href="room_r.html" title="레지던스 객실">
+                                <img src="./img/r_01.jpg" alt="레지던스 객실"></a>
+                        </li>
+
+                        <li><a href="room_r.html" title="레지던스 객실">
+                                <img src="./img/r_02.jpg" alt="레지던스 객실"></a>
+                        </li>
+
+                        <li><a href="room_r.html" title="레지던스 객실">
+                                <img src="./img/r_03.jpg" alt="레지던스 객실"></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!--탭03. 힐튼-->
+                <div class="tab03">
+
+                    <ul class="room01">
+
+                        <li>
+                            <a href="room_h.html" title="아난티힐튼"><img src="./img/h01.jpg" alt="아난티힐튼객실이미지" id="room_img"></a>
+                        </li>
+
+
+                        <!--객실상세설명_우측 표-->
+                        <li class="r_right">
+                            <h3>아난티 힐튼</h3>
+                            <table>
+                                <caption> 보다 넓고 편안한 휴식의 즐거움. 디럭스룸 </caption>
+                                <tr>
+                                    <th>크기</th>
+                                    <td>21평(70sqm, 발코니 포함) </td>
+                                </tr>
+                                <tr>
+                                    <th>구조</th>
+                                    <td>침실 1, 욕실 1, 프라이빗발코니</td>
+                                </tr>
+                                <tr>
+                                    <th>정원</th>
+                                    <td>2인 (최대 3인)</td>
+                                </tr>
+                            </table>
+
+                            <span class="more"> <a href="room_h.html" title="객실 상세보기">객실 상세보기</a></span>
+
+                            <ul CLASS="round_border">
+                                <li><a href="room_h.html" title="디럭스룸">&#x0023;디럭스룸</a></li>
+                                <li><a href="room_h.html" title="프리미엄룸">&#x0023;프리미엄룸</a></li>
+                                <li><a href="room_h.html" title="이그제큐티브룸">&#x0023;이그제큐티브룸</a></li>
+                                <li><a href="room_h.html" title="오션스위트">&#x0023;오션스위트</a></li>
+                                <li><a href="room_h.html" title="이그제큐티브라운지">&#x0023;라운지</a></li>
+
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                    <ul class=" grid room02">
+                        <li><a href="room_h.html" title="아난티힐튼">
+                                <img src="./img/h_04.jpg" alt="아난티힐튼"></a>
+                        </li>
+
+                        <li><a href="room_h.html" title="아난티힐튼">
+                                <img src="./img/h_02.jpg" alt="아난티힐튼"></a>
+                        </li>
+
+                        <li><a href="room_h.html" title="아난티힐튼">
+                                <img src="./img/h_03.jpg" alt="아난티힐튼"></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+            <!--시설정보-->
+
+            <article class="gird space_txt">
+                <div class="item">
+                    <h2>
+                        "깊이 있는 생각으로 전혀 다른 경험을 선사합니다"
+                    </h2>
+
+                    <h2>
+                        "깊이 있는 생각으로 <br> 전혀 다른 경험을 선사합니다"
+                    </h2>
+                    <h5> ‘바다 위의 성’을 콘셉트로 만들어진 아난티 코브는<br> 정적인 휴식과 활기찬 활동들을 동시에 누릴 수 있기에, 각자 취향대로 라이프스타일을 즐길 수 있는 곳입니다.
+                    </h5>
+                </div>
+            </article>
+
+            <article class="grid space">
+
+                <div class="item">
+
+                    <h2>Various Space<br> in ANANTI COVE</h2>
+
+                    <nav>
+                        <ul>
+                            <li><a href="">&#x0023; 레저 </a></li>
+                            <li><a href="">&#x0023; 문화</a></li>
+                            <li><a href="">&#x0023; 쇼핑 </a></li>
+                            <li><a href="">&#x0023; 건강</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="item mov">
+                    <!--동영상-->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/o2SoPAypCTE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+
+
+            <!--레스토랑-->
+            <article>
+
+                <ul class="dining">
+
+                    <li class="box01">
+                        <h2>Dining</h2>
+                        <span>더 건강하게, 더 아름답게<br>아난티의 정성으로 시작된 맛의 여정</span>
+
+                        <span id="icon">
+                            <i class="fas fa-angle-left icon01" onclick="moveLeft();"></i>
+
+                            <i class="fas fa-angle-right icon01" onclick="moveRight();"></i>
+                        </span>
+                    </li>
+                    <li><a href="#" title="레스토랑"><img src="./img/food01.jpg" alt="레스토랑" id="photo"></a></li>
+
+                    <li><a href="#" title="레스토랑"><img src="./img/food1.jpg" alt="레스토랑" id="photo2"></a></li>
+
+                    <li><a href="#" title="레스토랑"><img src="./img/f01.jpg" alt="레스토랑" id="photo3"></a></li>
+                </ul>
+
+
+                <!--		<div class="item box01">
+
+					<h2>Dining</h2>
+
+					<span>더 건강하게, 더 아름답게<br>아난티의 정성으로 시작된 맛의 여정
+					</span>
+					
+					<div id="icon">
+						<i class="fas fa-angle-left icon01" onclick="moveLeft();"></i>
+
+						<i class="fas fa-angle-right icon01" onclick="moveRight();"></i>
+					</div>
+
+				</div>
+
+				<div class="item"><a href="#" title=""><img src="./img/food01.jpg" alt="" id="photo"></a></div>
+				
+				<div class="item"><a href="#" title=""><img src="./img/food1.jpg" alt="" id="photo2"></a></div>
+				<div class="item"><a href="#" title=""><img src="./img/f01.jpg" alt="" id="photo3"></a></div>-->
+
+            </article>
+
+
+            <!--웨딩/이벤트-->
+            <div class="wedding">
+                <a href="#" title="웨딩">
+                    <h2>WEDDING &#x0026; EVENT</h2>
+
+                    <!--					pc-->
+                    <h3>인생의 특별한 순간.세심한 서비스로 잊지 못할 순간을 선사합니다. </h3>
+
+
+                    <!--					모바일-->
+                    <h3>인생의 특별한 순간.<br> 세심한 서비스로 잊지 못할 순간을 선사합니다. </h3>
+
+                </a>
+            </div>
+
+
+            <!--sns-->
+
+            <article class="sns">
+                <ul class="event">
+                    <li><a href="sns_evnet.html"><img src="./img/sns3.jpg" alt="sns이미지"></a></li>
+
+                    <li><a href="sns_evnet.html"><img src="./img/sns0.jpg" alt="sns이미지"></a></li>
+
+                    <li class="txtbox"><a href="sns_evnet.html">
+                            <h2>&#x0023;아난티 코브 <br>추억 공유 EVENT</h2>
+                            <span id="sns01">아난티에서의 즐거운 추억을 공유해주세요. </span> <span id="sns_btn">참여하기</span>
+                        </a></li>
+
+                    <li><a href="sns_evnet.html"><img src="./img/sns.jpg" alt="sns이미지"></a></li>
+
+                    <li><a href="sns_evnet.html"><img src="./img/sns7.jpg" alt="sns이미지"></a></li>
+
+                </ul>
+
+            </article>
+
+            <!--지도-->
+            <article class="grid100 map">
+                <h2>LOCATION</h2>
+                <div class="m_tab">
+
+                    <input type="radio" id="r06" name='tab' checked><label for="r06">부산</label>
+                    <input type="radio" id="r07" name='tab'><label for="r07">가평</label>
+                    <input type="radio" id="r08" name='tab'><label for="r08">남해</label>
+                    <input type="radio" id="r09" name='tab'><label for="r09">청담</label>
+
+
+
+                    <!-- <div class="item tab"> -->
+                    <div class="tab06">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.2597995970746!2d129.22683841560314!3d35.199997163819994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688ea8b62ceefd%3A0x74b07390cc624309!2z7JWE64Kc7YuwIOy9lOu4jA!5e0!3m2!1sko!2skr!4v1613704993705!5m2!1sko!2skr" title="부산"></iframe>
+                    </div>
+
+                    <div class="tab07">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12639.847666840458!2d127.4825613!3d37.6265836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5c1224eed2284be2!2z7JWE64Kc7Yuw7L2U65Oc!5e0!3m2!1sko!2skr!4v1613969197588!5m2!1sko!2skr" title="가평"></iframe>
+                    </div>
+
+                    <div class="tab08">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.160925063088!2d127.84978435105654!3d34.77672388655391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356e7907ee6cd1f7%3A0xdb926d2292af148e!2z7JWE64Kc7YuwIOuCqO2VtA!5e0!3m2!1sko!2skr!4v1613969229293!5m2!1sko!2skr" title="남해"></iframe>
+                    </div>
+
+                    <div class="tab09">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.2388169051897!2d127.04007095111275!3d37.52586733411435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca47849a7a58d%3A0x142c5c73d0098035!2z7JWE64Kc7YuwIO2BtOufvSDssq3ri7Q!5e0!3m2!1sko!2skr!4v1613969241958!5m2!1sko!2skr" title="청담"> </iframe>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </main>
+
+        <footer>
+            <br><br>
+            <div id="f_grid">
+                <div class="f_left">
+
+                    <!--pc-->
+                    <ul class="f_lnb">
+                        <li><a href="ananti.html" title="회사소개">회사소개</a></li>
+                        <li><a href="qna.html" title="문의">문의</a></li>
+                        <li><a href="coupon.html" title="쿠폰예약확인">쿠폰예약확인</a></li>
+                        <li><a href="gift.html" title="아난티 상품권">아난티 상품권</a></li>
+                        <li><a href="amenity.html" title="아난티 어메니티">아난티 어메니티</a></li>
+                        <li><a href="private.html" title="개인정보처리방침">개인정보처리방침</a></li>
+                        <li><a href="provison.html" title="이용약관">이용약관</a></li>
+                    </ul>
+
+                    <!--모바일-->
+                    <ul class="m_f_lnb">
+                        <li><a href="ananti.html" title="회사소개">회사소개</a></li>
+                        <li><a href="qna.html" title="문의">문의</a></li>
+                        <li><a href="private.html" title="개인정보처리방침">개인정보처리방침</a></li>
+                        <li><a href="provison.html" title="이용약관">이용약관</a></li>
+                    </ul>
+
+                    <div class="f_right">
+                        <ul class="f_sns">
+                            <li><a href="https://www.youtube.com/channel/UC6swKU0RN4wGeqPTyhLkT8A" title="유튜브 바로가기"> <img src="./img/sns_icon-01.png" alt="유튜브"> </a></li>
+
+                            <li><a href="https://www.instagram.com/ananti_life/" title="인스타그램 바로가기"> <img src="./img/sns_icon-02.png" alt="인스타그램"></a></li>
+
+                            <li><a href="https://blog.naver.com/ananti_life" title="블로그 바로가기"> <img src="./img/sns_icon-03.png" alt="블로그"></a></li>
+
+                            <li><a href="https://www.facebook.com/theananti" title="페이스북 바로가기"> <img src="./img/sns_icon-04.png" alt="페이스북 "></a></li>
+                        </ul>
+                        <div id="family">
+
+                            <label for="family">패밀리사이트</label>
+
+                            <select name="" id="family" onchange="siteUrl(this);">
+                                <option value="none">Family Site</option>
+                                <option value="https://www.ananti.kr/kr/">아난티</option>
+                                <option value="https://www.ananti.kr/kr/chord/index.asp">아난티코드</option>
+                                <option value="https://www.ananti.kr/kr/ananti_namhae/">아난티남해</option>
+                                <option value="https://www.ananti.kr/kr/club_chdm/">아난티청담</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <!--모바일 pc-->
+                <p class="pc_btn">PC 버전 보기</p>
+
+                <address>
+                    부산광역시 기장군 기장읍 기장해안로 000-00, Gijanghaean-ro, Sirang-ri, Gijang-eup,Gijang-gun, Busan<br>T. 051-000-0000 아난티 커뮤니케이션 센터 0000-0000<br>(c) ANANTI. All rights reserved.
+                </address>
+            </div>
+
+
+
+            <aside>
+                <a href="#" title="메인화면 상단으로 이동">TOP</a>
+
+            </aside>
+
+        </footer>
+
+        <!--	푸터 패밀리사이트 -->
+        <script>
+            function siteUrl(a) {
+
+                if (a.value != 'none') { //사용자가 선택목록을 선택했을때만 아래내용을 실행하고
+                    window.open(a.value); //사이트연결 실행
+                    a.value = 'none'; //값을 다시 초기화
+
+                } else { //그렇지 않을 경우
+                    return; //실행하지 않는다.
+                }
+            }
+
+        </script>
+
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'fade',
+                loop:true,
+                 autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+           
+                
+            });
+
+        </script>
+
+    </div>
+</body>
+
+</html>

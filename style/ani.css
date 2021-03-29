@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import url(//db.onlinewebfonts.com/c/88e77b9b43653c3e36057589ef18d1f1?family=Jost*+400+Book);
+
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0px; padding: 0px;}
+.slider{
+    width: 100%;
+    height: 90vh;
+}
+
+.slider .swiper-slide{
+    background-image: url(../psd/main_01.jpg);
+    background-repeat: no-repeat;
+background-size: cover;
+      
+}
+
+.slider .bg1 h2{
+    padding-top: 60px;
+    padding-right: 100px;
+    font-size: 50px;
+    color:#7c776d;
+    text-align: right;
+    }
+
+.slider .bg1 p{
+    font-size: 20px;
+    padding: 30px 100px 0px 0px;
+    line-height: 30px;
+    color:#7c776d;
+font-family: 'Noto Serif KR', serif;
+    font-weight: bold;
+       text-align: right;
+}
+
+.slider .bg2{
+    background-image: url(../psd/main_02.jpg);
+        position:relative;
+    background-position: center
+}
+
+.slider .bg2 div{
+    text-align: center;
+    line-height: 30px;
+    border:px solid rgba(255, 255, 255, 0.67);
+    width: 40%; margin: 0 auto;
+    padding: 2% 0px;
+
+    background-color: rgba(147, 140, 129, 0.97);
+    color: #fff;
+    font-family: 'S-CoreDream-3Light', '맑은 고딕';
+    transform: translateY(100%)
+    }
+
+.slider .bg2 h2{
+    font-family: 'mapodpp', '맑은 고딕', serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+   
+}
+
+.slider .bg3{
+    background-image: url(../psd/main_33.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider .bg3 div{
+    color: #fdffd6;
+    text-align: center;
+
+    transform: translateY(150%);
+}
+
+.slider .bg3 h2{
+    font-family:'mapodpp', '맑은 고딕', serif;
+    font-size: 40px;
+    padding-bottom: 60px;
+    font-weight: bold;
+}
+
+.slider .bg3 p{
+font-family: 'S-CoreDream-3Light', '맑은 고딕';
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.slider .bg4{
+    background-image: url(../psd/main_4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.slider .bg4 div{
+    text-align: center;
+    transform: translateY(250%);
+    color:#fef6e3;
+}
+.slider .bg4 h2{ 
+font-family: 'TTTogether', 'mapodpp','맑은 고딕';
+font-weight: lighter;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.slider .bg4 p {
+    font-size: 20px;
+     font-family: 'S-CoreDream-3Light', '맑은 고딕';
+    
+}
